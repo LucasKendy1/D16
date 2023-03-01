@@ -19,7 +19,7 @@
         <h3 id="informacoesdia"></h3>
     </header>
     <main>
-
+        <h3>Frase do dia</h3>
         <h2 id="containerfrase"></h2>
         <span id="reload" class="material-symbols-outlined">
             refresh
@@ -48,14 +48,14 @@
         let yname=""
         reload.addEventListener('click',refresh)
         
-        /*function nome(){
+        function nome(){
             yname=window.prompt("Qual seu nome?")
             let titulo=document.getElementById('boasvindas')
             titulo.innerHTML=`Bem vindo(a), ${yname}`
             //Aqui vai a hora q n consegui fazer
             refresh()
         }
-        */
+        
        let container=document.getElementById('containerfrase')
         function refresh(){
             let frase=Math.random()*(10-1)+1
