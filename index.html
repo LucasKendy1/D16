@@ -9,14 +9,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<body>
+<body onload="nome()">
     <header>
-        Regras Éticas
+        <h1 id="boasvindas"></h1>
     </header>
     <main>
-
+        <p class="frase" id="fr1">TODOS TÊM O DIREITO DE EXPRESSAR SEUS SENTIMENTOS E PENSAMENTOS. TUDO PODE SER DITO NO GRUPO, DESDE QUE COM RESPEITO. </p>
+        <p class="frase" id="fr2">TODAS AS OPINIÕES SÃO VALIDAS E MERECEM RESPEITO - NINGUÉM DEVE IMPOR O QUE PENSA E SENTE AO OUTRO. </p>
+        <p class="frase" id="fr3">AS FALAS E OS ACONTECIMENTOS INTERNOS DO GRUPO PERTENCEM A SEUS PARTICIPANTES E NÃO DEVEM SER REVELADOS A OUTRAS PESSOAS. </p>
+        <p class="frase" id="fr4">QUANDO UM PARTICIPANTE DO GRUPO, SEJA ALUNO OU PROFESSOR, ESTIVER FALANDO, OS DEMAIS DEVEM OUVI-LO COM ATENÇÃO. Cada um deve esforçar-se para exercitar a ESCUTA ATIVA. </p>
+        <p class="frase" id="fr5">É PRECISO FALAR PARA E NÃO DE ALGUÉM. Isto significa não falar de pessoas ausentes e se dirigir sempre diretamente aos companheiros, evitando expressões indefinidas como "alguém", "todo mundo", "alguns" etc. </p>
+        <p class="frase" id="fr6">OS COMENTÁRIOS DEVEM SER RELATIVOS AOS FATOS E ÀS IDÉIAS, E NÃO ÀS PESSOAS. </p>
+        <p class="frase" id="fr7">A PONTUALIDADE E A FREQÜÊNCIA SÃO CONDIÇÕES ESSENCIAIS PARA QUE O GRUPO PERCEBA SUA IMPORTÂNCIA E DESENVOLVA UMA AUTO-ESTIMA GRUPAL POSITIVA. As ausências são sentidas como "presenças" que não aconteceram, muitas vezes percebidas pelo grupo como descaso, desinteresse ou rejeição. </p>
+        <p class="frase" id="fr8">TODO ALUNO DEVE PARTICIPAR ATIVAMENTE DAS ATIVIDADES PROPOSTAS. A NÃO-PARTICIPAÇÃO ACARRETARÁ A PERDA DE PONTOS ACUMULADOS.</p>
+        <p class="frase" id="fr9">BOM ALUNO É AQUELE QUE NÃO DEPENDE APENAS DAS INSTRUÇÕES DO PROFESSOR. Ele mesmo busca aprofundar-se nos conteúdos propostos, pesquisando sobre o assunto em livros e na internet.</p>
+        <p class="frase" id="fr10">É IMPRESCINDÍVEL QUE TODOS LEMBREM E PROCUREM CUMPRIR OS PRINCÍPIOS LEVANTADOS NO PRIMEIRO DIA DE AULA.
+        </p>
+        <span class="material-symbols-outlined">
+            refresh
+        </span>
     </main>
     <footer>
         <!--<span class="material-symbols-outlined">
@@ -25,15 +39,39 @@
         <span class="material-symbols-outlined">
             favorite
         </span>-->
-        <span class="material-symbols-outlined">
+        <span id="onoff" class="material-symbols-outlined">
             toggle_on
         </span>
-        <span class="material-symbols-outlined">
-            toggle_off
-        </span>
+        
     </footer>
     <script>
-
+        /*let yname=""
+        function nome(){
+            yname=window.prompt("Qual seu nome?")
+            let titulo=document.getElementById('boasvindas')
+            titulo.innerHTML=`Bem vindo(a), ${yname}`
+        }
+        */
+       let frase1=document.getElementById('fr1')
+       let frase2=document.getElementById('fr2')
+       let frase3=document.getElementById('fr3')
+       let frase4=document.getElementById('fr4')
+       let frase5=document.getElementById('fr5')
+       let frase6=document.getElementById('fr6')
+       let frase7=document.getElementById('fr7')
+       let frase8=document.getElementById('fr8')
+       let frase9=document.getElementById('fr9')
+       let frase10=document.getElementById('fr10')
+        function nome(){
+            let frase=Math.random()*(10-1)+1
+            window.alert(parseInt(frase))
+            if(frase.value==1){
+                frase1.style.display='block'
+            }
+            else if(frase==2){
+                frase2.style.display='block'
+            }
+        }
     </script>
 </body>
 </html>
