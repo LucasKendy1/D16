@@ -15,7 +15,7 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
 footer{
@@ -31,13 +31,11 @@ footer{
 }
 
 h1{
-    position: absolute;
-    top: 40px;
-    left: 40px;
+    text-align: center;
     font-size: 28pt;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    
+    margin-top: 40px;
 }
 p{
     font-family: 'Shantell Sans', cursive;
