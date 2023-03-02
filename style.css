@@ -12,73 +12,73 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    
+    width: 100vw;
 }
 
 footer{
     position: absolute;
+    bottom: 0px;
     background-color: #221b33;
-    width: 100vw;
+    width: 98vw;
     color: white;
-    font-weight: 900;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    bottom: 0;
     height: 70px;
+    border: 3px solid #221b33;
 }
-
-h1{
-    text-align: center;
-    font-size: 28pt;
-    color: white;
+header{
     font-family: 'Josefin Sans', sans-serif;
-    margin-top: 40px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    height: 100px;
+    width: 100vw;
 }
-p{
-    font-family: 'Shantell Sans', cursive;
-    font-size: 19pt;
+header>h1{
+    font-size: 28pt;
+    line-height: 90px;
 }
-h2{
-    position: absolute;
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50vw;
+header>h3{ 
+    font-size: medium;
+}
+main{
+    width: 80vw;
+    margin: auto;
+}
+main>h2{
     font-family: 'Shantell Sans', cursive;
     color: white;
     font-size: large;
-    padding: 40px;
-    margin-top: 100px;
     background: rgba(255, 255, 255, 0.19);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    margin: auto;
+    -webkit-backdrop-filter: blur(5.5px); 
+    padding: 30px;
+    margin-top: 20px;
 }
-h3{
-    position: absolute;
+main>h3{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
-    font-size: medium;
-    top: 110px;
-    left: 50px;
+    text-align: center;
+    padding-top: 30px;
 }
 #reload{
-    position: absolute;
-    background-color: white;
-    font-size: 3em;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+    color: white;
+    font-size: 2em;
+    width: 70px;
+    height: 70px;
+    border-radius: calc(70px/2);
+    background-color: #221b33;
     text-align: center;
-    line-height: 100px;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    line-height: 70px;
+    cursor: pointer;
+    transition: .5s;
+    margin-left: 20px;
+}
+#reload:hover{
+    background-color: #624c96;
+    transform: rotate(90deg);
 }
 
 input[type='checkbox']{
@@ -89,12 +89,12 @@ input[type='checkbox']{
     appearance: none;
     background-color: rgb(255, 68, 0);
     border-radius: 25px;
-    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.247);
+    box-shadow: inset 0px 0px 20px 6px rgba(0, 0, 0, 0.247);
     cursor: pointer;
-    margin-top: 10px;
     transition: .4s;
     position: relative;
     transform: scale(.8);
+    margin-top: -60px;
 }
 input:checked[type='checkbox']{
     background-color: #4c02f8;
