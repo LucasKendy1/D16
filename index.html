@@ -18,28 +18,26 @@
         <h1 id="boasvindas"></h1>
         <h3 id="informacoesdia"></h3>
     </header>
+
     <main>
-        <h3>Frase do dia</h3>
+        <h3 id="frase">Frase do dia</h3>
+        <h4 id="marcadordia"></h4>
         <h2 id="containerfrase"></h2>
         <span id="reload" class="material-symbols-outlined">
             refresh
         </span>
     </main>
+    
     <footer>
-        <span id="footerspan" class="material-symbols-outlined">
+        <!--<span id="footerspan" class="material-symbols-outlined">
             menu
-        </span>
+        </span>-->
         
-        <span id="onoff" class="material-symbols-outlined">
-            toggle_on
-        </span>
-        <span id="offon" class="material-symbols-outlined">
-            toggle_off
-        </span>
+        <input type="checkbox" id="dianoite" onclick="wallpaper()">
         
-        <span id="footerspan" class="material-symbols-outlined">
+        <!--<span id="footerspan" class="material-symbols-outlined">
             favorite
-        </span>
+        </span>-->
 
     </footer>
     <script>
@@ -55,7 +53,7 @@
             //Aqui vai a hora q n consegui fazer
             refresh()
         }
-        
+
        let container=document.getElementById('containerfrase')
         function refresh(){
             let frase=Math.random()*(10-1)+1
@@ -92,11 +90,12 @@
                 container.innerHTML=`É IMPRESCINDÍVEL QUE TODOS LEMBREM E PROCUREM CUMPRIR OS PRINCÍPIOS LEVANTADOS NO PRIMEIRO DIA DE AULA.`
             }
         }
+        let body=document.getElementById('corpo')
+        /*
         let switchiconon=document.getElementById('onoff')
         let switchiconoff=document.getElementById('offon')
         switchiconon.addEventListener('click',switchback)
         switchiconoff.addEventListener('click',switchback)
-        let body=document.getElementById('corpo')
         function switchback(){
             if(switchiconon.style.display=='block'){
                 body.style.backgroundImage='url(imagens/mobilenight.jpg)'
@@ -108,7 +107,22 @@
                 switchiconoff.style.display='none'
             }
             
+        }*/
+        
+        //Mudança de wallpaper
+        let checkbox=document.getElementById('dianoite')
+        let frase=document.getElementById('frase')
+        function wallpaper(){
+            if(checkbox.checked==true){
+                body.style.backgroundImage='url(imagens/mobilenight.jpg)'
+                body.style.transition='.4s'
+                frase.innerHTML='Frase da noite'
+            }else{
+                body.style.backgroundImage='url(imagens/mobilemorning.jpg)'
+                frase.innerHTML='Frase do dia'
+            }
         }
+        
     </script>
 </body>
 </html>
